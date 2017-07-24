@@ -4,7 +4,8 @@
   "description": "playground for local git hooks",
   "main": "index.js",
   "scripts": {
-  	"start": "node index.js",
+  	"init": "chmod +x scripts/* && scripts/_init.sh",
+  	"start": "scripts/_start.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jag",
