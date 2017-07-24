@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
   	"init": "chmod +x _scripts/* && _scripts/_init.sh",
-  	"start": "scripts/_start.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  	"start": "_scripts/_start.sh",
+    "test": "_scripts/_test.sh"
   },
   "author": "Jag",
   "license": "ISC"

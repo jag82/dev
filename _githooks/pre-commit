@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "pre-commit hook"
-exit 1
+exit 0

@@ -20,7 +20,8 @@
 # The third example adds a Signed-off-by line to the message, that can
 # still be edited.  This is rarely a good idea.
 echo "OMADOFAMDFODA!!!!"
-exit 1;
+exit 0;
+
 case "$2,$3" in
   merge,)
     /usr/bin/perl -i.bak -ne 's/^/# /, s/^# #/#/ if /^Conflicts/ .. /#/; print' "$1" ;;
