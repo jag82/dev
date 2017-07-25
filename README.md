@@ -106,6 +106,8 @@ Public keys, private keys. (what they are, how to generate them)
 
 ##Sublime Text
 
+Add `subl` to `PATH` for easy opening of folders/files in Sublime Text.
+
 ###Packages
 
 Install package control from [here](https://packagecontrol.io/installation).
@@ -118,12 +120,16 @@ Various syntax highlighting packages as needed.
 
 *Markdown Preview* or *MarkdownLivePreview*
 
-*SublimeLinter*, *SublimeLinter-contrib-eslint*, *ESLint-Formatter*, *HTML-CSS-JS Prettify*
+*SublimeLinter* + *SublimeLinter-contrib-eslint* + *ESLint-Formatter* (Use with `eslint_d`, which is faster than `eslint`. Consider `{ "format_on_save": true }`)
+
+*HTML-CSS-JS Prettify*
 
 Snippets?
 
 
 ##Code Formatting
 
+
 ###ESLint
 
+`npm install -g eslint`
