@@ -1,0 +1,13 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
+
+Host curendo-test test.curendo.de
+    Hostname test.curendo.de
+    User superuser
+    Port 4422
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+

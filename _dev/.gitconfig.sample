@@ -1,0 +1,25 @@
+[core]
+	editor = "subl -n -w"
+	excludesfile = /Users/tus/.gitignore_global
+[difftool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Jag
+	email = jag.chadha@gmail.com
+[commit]
+	template = /Users/tus/.stCommitMsg
+[alias]
+	sclone = clone --recursive
+	scheckout = !git checkout $1 && git submodule update && :
+	scommit = !git submodule-only && git checkout $1 && git pull && git add . && git commit -am \"$2\" && :
+	spublish = !git tag v$1-$(git branch-name) && git push && git push --tags && git -C $(git root-path)/.. commit -am \"[$(git root-folder)] updated submodule to v$1-$(git branch-name)\" && git -C ../ push && :
+	spull = !git submodule-only && git fetch && git checkout $1 && git -C $(git root-path)/.. commit -am \"[$(git root-folder)] updated submodule to $1\" && :
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	root-path = "!git rev-parse --show-toplevel"
+	root-folder = "!basename $(git root-path)"
+	is-submodule = !(cd "$(git root-path)/.." && git rev-parse --is-inside-work-tree) | grep true
+	submodule-only = "!sh -c 'if [ $(git is-submodule) ]; then echo "submodule command"; else echo "ERROR: command for submodules only"; exit 1; fi'"
