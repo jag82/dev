@@ -58,14 +58,19 @@ We'll also build scripts to perform routine tasks such as creating web servers, 
 
 http://corz.org/network/static.ip.address.php
 
+http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 ##Next Steps
 
-- external webserver
+- check if rc.local is really starting a node app in the background
 
-- external webserver with fixed ip (+ domain name)
+- check create-web-app script
+
+- get router password + setup MAC->ip + port forwarding + ddns
 
 - headless rpi
+
+- remove sample web app from this repo
 
 - rpi cron jobs (normal, web): ping! report/notify (see tap)
 

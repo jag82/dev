@@ -100,6 +100,23 @@ sudo find / -name 'raspi-config'
 
 ####expr (regexes)
 
+
+####functions
+```
+function testfn(){ 
+	echo this is a test function
+	echo $1	#first arg
+	echo $2	#second arg
+	echo $@	#all args
+	echo $# #number of args
+	echo $? #exit code of last function
+}
+```
+####imports
+```
+source ./utils.sh
+
+testfn alpha beta
 ```
 
 ###PATH variables

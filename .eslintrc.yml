@@ -581,7 +581,7 @@ rules:
         2,
         'never',
         {
-            exceptions: [ 'empty' ]         # more: '{}', '[]', '()'
+#            exceptions: [ 'empty' ]         # more: '{}', '[]', '()'
         }
     ]
     space-infix-ops: [                      # FIXABLE

@@ -4,10 +4,14 @@
   "description": "playground for local git hooks",
   "main": "index.js",
   "scripts": {
-  	"init": "chmod +x _scripts/* && _scripts/_init.sh",
-  	"start": "_scripts/_start.sh",
+    "init": "chmod +x _scripts/* && _scripts/_init.sh",
+    "start": "_scripts/_start.sh",
     "test": "_scripts/_test.sh"
   },
   "author": "Jag",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node-cmd": "^3.0.0"
+  }
 }

@@ -1,9 +1,9 @@
 #Create and serve a web application
 #-----------------------------------
 
+./utils.sh
+
 echo "1. installing npm"
-sudo apt update
-sudo apt upgrade -y
 sudo apt install npm
 
 echo "2. creating an npm project"
