@@ -9,67 +9,96 @@ See `_dev/.bash_profile.sample`.
 
 ###Basic Commands
 
+`stdout`
+`stdin`
+
+####show files in your current directory
 ```
-#show files in your current directory
 ls
 ls -a #shows hidden files
+```
 
-#navigate to another directory
+####navigate to another directory
+```
 cd .. #up one directory
 cd tango #enter the /tango directory (if present)
 cd ~ #return to your home directory (user-specific)
 #TIP: use tab to autocomplete available directory names
 #TIP: customize your command prompt to make it easier to understand
+```
 
-#symbol for your home directory
+####symbol for your home directory
+```
 ~
+```
 
-#output text to stdout (standard out, which can be printed to screen or used by other programs)
+####output text to stdout (standard out, which can be printed to screen or used by other programs)
+```
 echo "This will get printed or passed to another program."
 NAME="Jag"
 echo "$NAME is cool."
+```
 
-#create file
+####output text to stdout and take arguments from stdin
+echo 'abc' | cat
+
+
+####create file
+```
 touch your-file.js
+```
 
-#delete a file
+####delete a file
+```
 rm your-file.js
+```
 
-#delete a directory (be careful!)
+####delete a directory (be careful!)
+```
 rm -rf your-directory
+```
 
-#move a file/directory TODO
+####move a file/directory TODO
+```
 mv source dest
+```
 
-#copy a file/directory TODO
+####copy a file/directory TODO
 
-#append to file
+####append to file
 echo "something to append" >> your-file.js
 
-#overwrite/create file
+####overwrite/create file
 echo "something to write" > your-file.js
 
-#piping TODO | ||
+####piping TODO | ||
 
-#grep TODO
+####grep TODO
 
-#read a file TODO < <<
+####read a file TODO < <<
 
-#time TODO
+####time TODO
 
-#cat TODO
+####sed TODO
 
-#sed TODO
+####cut TODO
 
-#cut TODO
-
-#find TODO
+####find TODO
 ```
 sudo find / -name 'raspi-config'
 ```
 
-#run multiple programs TODO & &&
+####curl TODO
 
+####run multiple programs TODO & &&
+
+####ifconfig
+
+####reboot
+
+####sudo
+
+####expr (regexes)
 
 ```
 

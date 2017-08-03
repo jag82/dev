@@ -1,6 +1,6 @@
 ##SSH
 
-SSH keys are a strong replacement for passwords. They can be used to grant access to a remote machine (e.g. github, a raspberry pi) without having to manually enter a password. This is useful for writing scripts for automation that are secure but do not contain sensitive passwords! They exist as a public/private key pair, each stored in a file (typically in the `.ssh` folder). When giving your key to a remote system, it is **always** your public key (e.g. `id_rsa.pub`), **never** your private key.
+SSH keys are a strong replacement for passwords. They can be used to grant access to a remote machine (e.g. github, a raspberry pi) without having to manually enter a password. This is useful for writing scripts for automation that are secure but do not contain sensitive passwords! They exist as a public/private key pair, each stored in a file (typically in the `.ssh` folder). When giving your key to a remote system, it is **always** your public key (e.g. `id_rsa.pub`), **never** your private key. See [Networking](./network.md) for getting addresses to remote machines on the internal network or the internet.
 
 
 ###Checking for existing keys

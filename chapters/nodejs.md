@@ -1,21 +1,17 @@
 #Node.js
 
 Node allows us to run any arbitrary javascript program on our machine.
-
+https://certsimple.com/blog/deploy-node-on-linux
 
 
 
 ##NPM
 
-`npm init`
+See `scripts/create-web-app.sh`.
 
-`package.json`
+`npm init` initializes a new npm project. Details about the project, its dependencies, and its entry points should be defined in the generated `package.json`.
 
-npmjs.org
-
-###Scripts
-
-TODO
+`npm install --save <package-name>` installs packages from the [npm website](npmjs.org) and adds them to the `package.json`.
 
 
 
@@ -38,6 +34,8 @@ All projects should begin the same:
 ##Web App
 
 1. Install NPM and Node.js
+
+
 
 2. Create an npm project and install Express, a web server library.
 ```
@@ -70,14 +68,7 @@ node index.js
 
 5. To access the app locally, visit `localhost:3000` on the same machine.
 
-For more information, see the Node.js web application help (TODO).
+6. To access the app from the local network, [get the internal IP](./network.md) or hostname and visit `<internal-ip-or-hostname>:3000`.
 
 
-6. To access the app from within the same WiFi network, get the internal IP and visit this address in the browser of another device connected to the same network.
-```
-ifconfig | grep inet | grep broadcast
-
-#inet 192.168.178.38 netmask 0xffffff00 broadcast 192.168.178.255
-
-#visit 192.168.178.38:3000
-```
+7. To access the app from the internet, we'll need to [setup a static address]('./network.md').

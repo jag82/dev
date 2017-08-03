@@ -29,14 +29,17 @@ You will want to access the machine by a unique name (e.g. ci-server.local) inst
 
 ##Execute Code on Startup/Boot
 
-Edit `/etc/rc.local` to add scripts that should run on boot/startup. For example: `su pi -c 'node /home/pi/server.js < /dev/null &'`
+Edit `/etc/rc.local` to add scripts that should run on boot/startup. For example: `su pi -c 'node /home/pi/server.js < /dev/null &'`. Note that `printf` can be [tracked down.](https://askubuntu.com/questions/575913/what-does-printf-do-in-rc-local)
 
 
-##Installing Node.js
+##Installing Node.js and NPM
 
-To run javascript scripts, we'll need to install *node.js*.
+To run javascript scripts, we'll need to install *node.js* and *npm*.
 ```
+	apt update
+	apt upgrade
 	apt install nodejs
+	apt install npm
 ```
 or
 ```
@@ -44,17 +47,31 @@ or
 	sudo dpkg -i node_latest_armhf.deb
 ```
 
+##Static IP (internal only -- TODO perhaps it's better to set the hostname and scan for the suffix (e.g. .local, .fritz.box))
 
-##Static IP
+Edit `/etc/dhcpcd.conf` by adding the following lines. You'll need your router's IP address (TODO how to get from commandline)
 
-TODO how to give the Pi a static IP (for external connections)
+**WARNING** note the 192.168.178.1 as the router's IP in the example below. It is used for both routers and domain_name_servers. The first 3 segments are also used in the chosen static ip_address.
 
+*Ethernet*
+```
+interface eth0
 
+static ip_address=192.168.178.10/24
+static routers=192.168.178.1
+static domain_name_servers=192.168.178.1
+```
 
+*WLAN*
+```
+interface wlan0
 
+static ip_address=192.168.178.200/24
+static routers=192.168.178.1
+static domain_name_servers=192.168.178.1
+```
 
-
-
+Then `sudo reboot` and confirm the changes with `ifconfig`.
 
 
 ## Other Raspberry Pi Notes (TODO)
