@@ -24,11 +24,21 @@ See `/chapters`.
 
 -SSH
 
+##Next Steps
 
+- internal webserver
 
+- external webserver
 
+- external webserver with fixed ip (+ domain name)
 
+- headless rpi
 
+- rpi cron jobs (normal, web): ping! report/notify (see tap)
+
+- turn on/off pi @ time-of-day
+
+- backup pi, create extra noobs/raspbian SD cards
 
 
 

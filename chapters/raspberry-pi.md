@@ -3,79 +3,61 @@
 Raspberry Pis are cheap machines that run a variant of linux and can be used as servers. Our goal will be to create reproducible servers that can be hosted locally by a client, or by our team. We will always use the Raspbian OS (from and SD card) for consistency. We can interact with the Pi by pluggin in peripherals (monitor, mouse, keyboard) for the initial setup and as a fallback, but generally speaking, we should SSH into it.
 
 
-##Direct Setup
+##Initial Setup
 
 Connect a power supply, monitor, keyboard, mouse, wifi.
 
-Install Raspbian, Ubuntu, or whatever on the machine via SD card.
+Install Raspbian via NOOBS on an SD card. (TODO link, file)
 
-Setup the machine by pulling from various git repos, changing the configs to autostart/run programs/whatever.
+TODO Setup the machine by pulling from various git repos, changing the configs to autostart/run programs/whatever.
 
+The default username and password are `pi` and `raspberry`. Change them!
 
+The default hostname is `raspberrypi`, allowing us to access the machine (e.g. by SSH) at `raspberrypi.local`.
 
-##SSH
+The command line tool `raspi-config` has many useful options (e.g. enabling SSH access, setting the hostname, auto login). To directly edit the file, find it via `sudo find / -name 'raspi-config'`.
 
-TODO how to ssh into a Pi
+##SSH Access
 
-
-
-
-#Internal name instead of IP
-
-TODO how to give the Pi a name (e.g. ci-server.local) instead of an IP (e.g. 192.168.178.32).
+Enable SSH access via `raspi-config`, then add public SSH keys of machines that should have access to `~/.ssh/authorized_keys`. [See the SSH chapter for more details.](./chapters/ssh.md)
 
 
+##Hostname
 
-#Static IP
+You will want to access the machine by a unique name (e.g. ci-server.local) instead of an IP (e.g. 192.168.178.32). To do so, run `sudo raspi-config` and edit the hostname.
+
+
+##Execute Code on Startup/Boot
+
+Edit `/etc/rc.local` to add scripts that should run on boot/startup. For example: `su pi -c 'node /home/pi/server.js < /dev/null &'`
+
+
+##Installing Node.js
+
+To run javascript scripts, we'll need to install *node.js*.
+```
+	apt install nodejs
+```
+or
+```
+	wget http://node-arm.herokuapp.com/node_latest_armhf.deb 
+	sudo dpkg -i node_latest_armhf.deb
+```
+
+
+##Static IP
 
 TODO how to give the Pi a static IP (for external connections)
 
 
 
 
-#How to skip login/password
-
-TODO when starting headless, we need to skip the login/pass screen
 
 
 
 
-#How to immediately run a program on startup
 
-TODO how to run a program immediately after starting up the pi.
-
-
-Raspberry Pi Notes
-
-  Noobs -> Raspbian
-	(TODO where to get it, maybe a copy of the iso)
-
-	pi:raspberry@raspberrypi.local
-
-	Important files:
-
-		raspi-config	command for editing config (e.g. for ssh access, autologin, hostname)
-				you could also edit the file yourself: 
-					https://raspberrypi.stackexchange.com/questions/1322/where-is-the-script-for-raspi-config-stored-in-the-fs-on-raspbian
-					sudo find / -name 'raspi-config'
-
-		/etc/rc.local	for scripts to run on boot
-
-  SSH Access
-	https://www.raspberrypi.org/documentation/remote-access/ssh/
-
-  Run a script @ boot
-	You can define things to run on boot in /etc/rc.local
-	In that shell script, you don't have the same path as when you log in
-  	su pi -c 'node /home/pi/server.js < /dev/null &'
-
-  Setup Node.js
-	apt install nodejs
-	  vs.
-	wget http://node-arm.herokuapp.com/node_latest_armhf.deb 
-	sudo dpkg -i node_latest_armhf.deb
-
-	  http://weworkweplay.com/play/raspberry-pi-nodejs/
+## Other Raspberry Pi Notes (TODO)
 
   How to use phantomjs for pi
 	  https://www.bitpi.co/2015/02/11/compiling-phantomjs-on-raspberry-pi/
@@ -85,3 +67,7 @@ Raspberry Pi Notes
 
   How to start the pi at a specific time
 
+
+	How to skip login/password
+
+		TODO when starting headless, we need to skip the login/pass screen

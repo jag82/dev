@@ -63,6 +63,11 @@ echo "something to write" > your-file.js
 
 #cut TODO
 
+#find TODO
+```
+sudo find / -name 'raspi-config'
+```
+
 #run multiple programs TODO & &&
 
 
