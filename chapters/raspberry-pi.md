@@ -45,4 +45,43 @@ TODO when starting headless, we need to skip the login/pass screen
 TODO how to run a program immediately after starting up the pi.
 
 
+Raspberry Pi Notes
+
+  Noobs -> Raspbian
+	(TODO where to get it, maybe a copy of the iso)
+
+	pi:raspberry@raspberrypi.local
+
+	Important files:
+
+		raspi-config	command for editing config (e.g. for ssh access, autologin, hostname)
+				you could also edit the file yourself: 
+					https://raspberrypi.stackexchange.com/questions/1322/where-is-the-script-for-raspi-config-stored-in-the-fs-on-raspbian
+					sudo find / -name 'raspi-config'
+
+		/etc/rc.local	for scripts to run on boot
+
+  SSH Access
+	https://www.raspberrypi.org/documentation/remote-access/ssh/
+
+  Run a script @ boot
+	You can define things to run on boot in /etc/rc.local
+	In that shell script, you don't have the same path as when you log in
+  	su pi -c 'node /home/pi/server.js < /dev/null &'
+
+  Setup Node.js
+	apt install nodejs
+	  vs.
+	wget http://node-arm.herokuapp.com/node_latest_armhf.deb 
+	sudo dpkg -i node_latest_armhf.deb
+
+	  http://weworkweplay.com/play/raspberry-pi-nodejs/
+
+  How to use phantomjs for pi
+	  https://www.bitpi.co/2015/02/11/compiling-phantomjs-on-raspberry-pi/
+  
+  How to schedule cronjobs
+  	https://quaintproject.wordpress.com/2013/09/29/how-to-schedule-a-job-on-the-raspberry-pi/
+
+  How to start the pi at a specific time
 
