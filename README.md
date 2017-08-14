@@ -1,5 +1,7 @@
 #Developer Guide
 
+This is a generic to commonly used tools. If you're visiting, pick a chapter that's interesting to you (e.g. `chapters/bash.md`) and try out the commands in it. **WARNING** as this is an incomplete guide, you will need to do some research on your own (as in all of life).
+
 The layers that we operate on can be cleanly divided as follows:
 
 - Hardware
@@ -62,8 +64,6 @@ http://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 ##Next Steps
 
-- check if rc.local is really starting a node app in the background
-
 - check create-web-app script
 
 - get router password + setup MAC->ip + port forwarding + ddns
@@ -79,7 +79,17 @@ http://misc.flogisoft.com/bash/tip_colors_and_formatting
 - backup pi, create extra noobs/raspbian SD cards
 
 
+##TODO
 
+- external server monitoring
+
+- private git repo
+
+- private npm repo
+
+- CI servers
+
+- password server
 
 
 

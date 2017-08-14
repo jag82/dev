@@ -13,8 +13,56 @@ See `scripts/create-web-app.sh`.
 
 `npm install --save <package-name>` installs packages from the [npm website](npmjs.org) and adds them to the `package.json`.
 
+`npm version <patch|minor|major>` bumps the version number (patch = +0.0.1, minor = + 0.1.x, major = +1.x.x) and adds a git tag.
+
+`npm publish` TODO how to publish to private repos?
+
+###Scripts
+`npm run` lists all scripts defined in the `scripts` section of `package.json` (TODO explain the package json, include a sample in `/_dev`).
+
+`npm run <script>` if run with an argument, it runs the script defined in `package.json`'s `script` section. Note that these can be `bash` commands or even a separate `bash` or `js` file. In these scripts, all locally installed dependencies (see `npm install`) are available in the `PATH`. So if you can call anything installed in this project (e.g. `faucet`) even if they're not globally available. If you call `env` in an npm script, it shows the many other conveniently available variables.
+
+Note that every defined script will also have a `pre-` and `post-` hook. In short, if you defined a script called `lint`, then the following scripts would be run in order: `prelint`, `lint`, `postlint`
+
+You can pass arguments to scripts via the following syntax. Everything after the first `--` will be passed directly to the underyling script.
+
+*package.json*
+```
+{
+	...
+	"scripts": {
+		"test": "mocha test"	//TODO: flesh out with real example
+	}	
+	...
+}
+```
+
+```
+npm run test -- --someflag -f 
+//will run mocha test --someflag -f
+```
+
+The `package.json` can also contain a `config` section, allowing to declare variables for use in the `scripts` section or in other parts of the app (presumably).
+
+```
+{
+  ...
+  "config": {
+    "reporter": "no-reporter"
+  },
+  "scripts": {
+    "echo": "echo $npm_package_config_reporter"
+  }
+  ...
+}
+```
 
 
+
+
+
+Sources:
+https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
 
 ##Getting Started
 

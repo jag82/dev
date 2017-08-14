@@ -1,3 +1,5 @@
+//a bare-bones website example
+
 const cmd = require('node-cmd');
 const express = require('express');
 const app = express();

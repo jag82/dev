@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "playground for local git hooks",
   "main": "index.js",
+  "config": {
+    "reporter": "no-reporter"
+  },
   "scripts": {
     "init": "chmod +x _scripts/* && _scripts/_init.sh",
     "start": "_scripts/_start.sh",
-    "test": "_scripts/_test.sh"
+    "test": "_scripts/_test.sh",
+    "env": "env",
+    "echo": "echo $npm_package_config_reporter"
   },
   "author": "Jag",
   "license": "ISC",
