@@ -1,7 +1,7 @@
 console.log('Captain Hook says "Hello World"');
 
 
-var x = 1;
+// var x = 1;
 
 x * y;
 

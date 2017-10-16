@@ -120,3 +120,17 @@ node index.js
 
 
 7. To access the app from the internet, we'll need to [setup a static address]('./network.md').
+
+Another option is to use the npm package `now`. 
+```
+npm install -g now
+now login   
+# follow the prompts to create an account
+
+now login
+# your web app is now deployed at https://app-name-guid.now.sh
+
+# optionally change the url to something memorable
+now alias https://app-name-guid.now.sh custom-prefix.now.sh
+```
+

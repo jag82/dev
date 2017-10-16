@@ -4,6 +4,9 @@ This is a generic to commonly used tools. If you're visiting, pick a chapter tha
 
 The layers that we operate on can be cleanly divided as follows:
 
+- Servers
+	- remote server
+	- local servers
 - Hardware
 	- raspberry pi
 	- personal computers
@@ -50,6 +53,7 @@ See `/chapters`.
 
 -SSH
 
+-Servers
 
 ##Scripts
 

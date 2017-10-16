@@ -11,7 +11,8 @@
     "start": "_scripts/_start.sh",
     "test": "_scripts/_test.sh",
     "env": "env",
-    "echo": "echo $npm_package_config_reporter"
+    "echo": "echo $npm_package_config_reporter",
+    "lint": "eslint **/*.js"
   },
   "author": "Jag",
   "license": "ISC",

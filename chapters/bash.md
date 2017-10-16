@@ -74,6 +74,10 @@ echo "something to append" >> your-file.js
 ####overwrite/create file
 echo "something to write" > your-file.js
 
+
+####single quotes = literal, double quotes= expanded
+https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
+
 ####piping TODO | ||
 
 ####grep TODO
@@ -89,8 +93,12 @@ echo "something to write" > your-file.js
 ####cut TODO
 
 ####find TODO
+https://www.cyberciti.biz/faq/find-command-exclude-ignore-files/
+
 ```
 sudo find / -name 'raspi-config'
+
+find /path/to/files -type f -exec sed -i 's/oldstring/new string/g' {} \;
 ```
 
 ####curl TODO
@@ -106,16 +114,26 @@ sudo find / -name 'raspi-config'
 ####expr (regexes)
 
 
-####functions
+####functions (also ####args)
 ```
 function testfn(){ 
 	echo this is a test function
+	echo $# #number of args
 	echo $1	#first arg
 	echo $2	#second arg
 	echo $@	#all args
-	echo $# #number of args
 	echo $? #exit code of last function
 }
+
+####if statements
+```
+if [ $1 -gt 100 ]
+then
+echo Hey that\'s a large number.
+pwd
+fi
+```
+
 ```
 ####imports
 ```
