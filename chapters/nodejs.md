@@ -76,8 +76,31 @@ All projects should begin the same:
 
 4. Anything else should be contained in `README.md`.
 
+##Running Programs
+
+Node can execute any js file, independent of a browser.
+
+`node <filename-with-or-without .js ending> <optional-arguments-separated-by-spaces>`
+
+You can access arguments passed in this way via `process.argv`:
+
+**index.js**
+```
+process.argv.forEach(function(arg) {
+  console.log(arg);
+});
+```
+
+`node index aCustomArg` prints:
+  - <path>/node
+  - <path>/index.js
+  - aCustomArg
 
 
+##Writing/Publishing Modules
+
+`npm init`
+`npm publish`
 
 ##Web App
 

@@ -44,6 +44,7 @@ echo "$NAME is cool."
 ####output text to stdout and take arguments from stdin
 echo 'abc' | cat
 cat README.md
+cat ~/.ssh/id_rsa.pub #outputs your public SSH key
 
 
 ####create file
@@ -101,9 +102,33 @@ sudo find / -name 'raspi-config'
 find /path/to/files -type f -exec sed -i 's/oldstring/new string/g' {} \;
 ```
 
-####curl TODO
+####curl
+```
+curl google.com
+```
 
-####run multiple programs TODO & &&
+returns html as string:
+
+```
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>302 Moved</TITLE></HEAD><BODY>
+<H1>302 Moved</H1>
+The document has moved
+<A HREF="http://www.google.de/?gfe_rd=cr&amp;dcr=0&amp;ei=uE8AWu-5G4nVXrzuqbAI">here</A>.
+</BODY></HTML>
+```
+
+####run multiple commands
+
+Run commands in sequence:
+```
+touch index.js && echo "console.log('hello world')" && node index
+```
+
+Run commands in parallel:
+```
+program1 & simlutaneousProgram2 #TODO replace with real, runnable example!
+```
 
 ####ifconfig
 
@@ -169,5 +194,9 @@ The advanced packaging tool (APT) is the best way to install software for Linux 
 ## Other
 
 FYI, http://www.etalabs.net/sh_tricks.html is a nifty collection of the cruft necessary to fight the oddities and incompatibilities of bourne shells, sh.
+
+## History
+
+`~/.bash_history` contains a list of recently used commands. If you type `ctrl+R` from the commandline you can search through this list for matches.
 
 
