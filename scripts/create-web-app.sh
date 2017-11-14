@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Create and serve a web application
 #-----------------------------------
 

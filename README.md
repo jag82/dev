@@ -1,3 +1,7 @@
+*ALWAYS INCLUDE A README!*  It is the entry point for understanding what's inside a folder and how it's intended to work.
+
+
+
 #Developer Guide
 
 This is a generic to commonly used tools. If you're visiting, pick a chapter that's interesting to you (e.g. `chapters/bash.md`) and try out the commands in it. **WARNING** as this is an incomplete guide, you will need to do some research on your own (as in all of life).

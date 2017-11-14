@@ -1,3 +1,5 @@
+#!/bin/bash
+
 UTILS_COLOR_2='\033[1;47m'
 UTILS_COLOR_1='\e[44;1;37m'
 UTILS_NO_COLOR='\033[0m'

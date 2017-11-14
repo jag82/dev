@@ -4,8 +4,18 @@ Shell scripts will be our bread and butter.
 
 
 
-###Customized Command Line
+###Customized Command Line and PATH vars
 See `_dev/.bash_profile.sample`.
+
+Note the difference between `.bashrc` and `.bash_profile` [here](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html).
+
+###Editors
+
+It's important to be able to use an in-console editor such as `vim` (which can be learned by typing `vimtutor`) or `nano`.
+
+###Permissions
+
+TODO: `chmod`
 
 ###Basic Commands
 
@@ -168,7 +178,7 @@ testfn alpha beta
 ```
 
 
-###PATH variables
+##PATH variables
 
 In order to call a program from bash, it needs to be declared in the PATH variable. To do so, open `~/.bash_profile` and add:
 
@@ -183,6 +193,13 @@ If there's another line that starts with `PATH=`, make sure the above line comes
 - `$PATH:/usr/local/sbin`: whatever path already is + a path to some other binaries we want to add
 
 
+##Symlinks
+
+Sometimes a file live in one location, but you want to act like it exists somewhere else. Think of it as a mirrored copy. 
+
+```
+ln -sf ../_githooks .git/hooks
+```
 
 ## Advanced Packaging Tool (APT)
 

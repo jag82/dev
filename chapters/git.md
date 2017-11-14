@@ -15,7 +15,7 @@ Merge/diff tools. KDiff3?
 
 Git hooks can be triggered at various phases of the git lifecycle. Local hooks are run out of the `.git/hooks` directory. It is initially populated with `.sample` files.  This directory is not checked into the repo, preventing us from sharing these hooks.
 
-To deal with this we place our hooks in `/githooks` and must simlink it with `.git/hooks`. This should be handled by `npm run init` to prevent forgetting or misconfigurations.
+To deal with this we place our hooks in `/githooks` and must symlink it with `.git/hooks`. This should be handled by `npm run init` to prevent forgetting or misconfigurations.
 
 
 ###Servers
