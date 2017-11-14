@@ -128,6 +128,11 @@ The document has moved
 </BODY></HTML>
 ```
 
+####wget
+```
+wget https://maps.googleapis.com/maps/api/staticmap?center=0,0&zoom=1&size=100x100&key=AIzaSyAWn2azIPVDJLTDayu-NTf5elROBD_ax6A
+```
+
 ####run multiple commands
 
 Run commands in sequence:
