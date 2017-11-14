@@ -1,3 +1,7 @@
+#this should live at ~/.ssh/config
+
+#http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+
 Host *
  AddKeysToAgent yes
  UseKeychain yes
@@ -10,4 +14,14 @@ Host curendo-test test.curendo.de
     Port 4422
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes
+
+
+
+Host jag-do
+    User root
+	Hostname 46.101.176.135
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
 

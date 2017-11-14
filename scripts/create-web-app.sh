@@ -5,8 +5,11 @@
 
 ./utils.sh
 
+echo "0. updating package repositories"
+sudo apt update
+
 echo "1. installing npm"
-sudo apt install npm
+sudo apt install -y npm
 
 echo "2. creating an npm project"
 #2017-08-02-jc --force and --yes are not available in npm 1.4.21 (the latest for raspbian), so we can't skip npm init's prompts
@@ -29,6 +32,11 @@ echo "
 
 echo "3. installing express"
 npm install --save express
+
+
+echo "3b. installing nodejs"
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt install -y nodejs
 
 echo "4. writing simple web app"
 echo "
