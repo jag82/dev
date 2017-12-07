@@ -1,4 +1,4 @@
-*ALWAYS INCLUDE A README!*  It is the entry point for understanding what's inside a folder and how it's intended to work.
+**ALWAYS INCLUDE A README!**  It is the entry point for understanding what's inside a folder and how it's intended to work.
 
 
 
@@ -36,8 +36,37 @@ The layers that we operate on can be cleanly divided as follows:
 	- routers (wifi/ethernet)
 
 
-This README is a starting point for all documentation (TODO: restructure after first run). Since we're likely to run into problems related to following the directions in these files, I propose the use of [a private version of StackOverflow](https://stackoverflow.com/channels) as a kind of FAQ with relevant answers.
+This README is a starting point for all documentation (TODO: restructure after first run). Since we're likely to run into problems related to following the directions in these files, consider the use of [a private version of StackOverflow](https://stackoverflow.com/channels) as a kind of FAQ with relevant answers. 
 
+##Principles
+
+- Examples should be taken from real life.
+BAD:
+```
+```
+GOOD:
+```
+```
+
+- Blindly running code from this guide should not be destructive
+BAD:
+>
+GOOD:
+>
+
+- Blindly running code should result in a path to correct usage
+BAD:
+```
+```
+GOOD:
+```
+```
+
+- Do not overexplain.
+BAD:
+> 
+GOOD:
+>
 
 ##Chapters
 

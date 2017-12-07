@@ -52,10 +52,16 @@ echo "$NAME is cool."
 ```
 
 ####output text to stdout and take arguments from stdin
-echo 'abc' | cat
+```
+#output a file's contents to the terminal
 cat README.md
-cat ~/.ssh/id_rsa.pub #outputs your public SSH key
 
+#pipe some other output to cat for display
+echo 'abc' | cat
+
+#outputs your public SSH key
+cat ~/.ssh/id_rsa.pub 
+```
 
 ####create file
 ```
@@ -104,6 +110,13 @@ https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
 ####cut TODO
 
 ####find TODO
+```
+#find all files named *.orig in current directory
+find . -name *.orig
+
+#delete the found files
+find . -name *.orig -delete
+```
 https://www.cyberciti.biz/faq/find-command-exclude-ignore-files/
 
 ```

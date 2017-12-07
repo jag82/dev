@@ -34,8 +34,32 @@ www 10800 IN CNAME webredir.vip.gandi.net.
 
 ```
 
+`now`
+This is a way of publishing a web app on the internet quickly. Very easy to use. Good for demos, bad for production. 
+
 Which defines the following urls:
 
  - TODO:
  - TODO:
  
+ ##Processes
+
+ `nodemon`
+Restarts node server whenever changes are made to source files. This is good during development. 
+
+ `forever`
+ Restarts node server whenever it crashes. It also can run it in the background. This is good for production.
+
+ ```
+ npm install -g forever
+
+ forever start index.js
+
+ forever list
+ ```
+ https://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever/
+
+ `pm2`
+ Similar to forever. Digital Ocean has tutorials on using it:
+ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+
