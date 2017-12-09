@@ -52,10 +52,16 @@ echo "$NAME is cool."
 ```
 
 ####output text to stdout and take arguments from stdin
-echo 'abc' | cat
+```
+#output a file's contents to the terminal
 cat README.md
-cat ~/.ssh/id_rsa.pub #outputs your public SSH key
 
+#pipe some other output to cat for display
+echo 'abc' | cat
+
+#outputs your public SSH key
+cat ~/.ssh/id_rsa.pub 
+```
 
 ####create file
 ```
@@ -104,6 +110,13 @@ https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
 ####cut TODO
 
 ####find TODO
+```
+#find all files named *.orig in current directory
+find . -name *.orig
+
+#delete the found files
+find . -name *.orig -delete
+```
 https://www.cyberciti.biz/faq/find-command-exclude-ignore-files/
 
 ```
@@ -126,6 +139,11 @@ returns html as string:
 The document has moved
 <A HREF="http://www.google.de/?gfe_rd=cr&amp;dcr=0&amp;ei=uE8AWu-5G4nVXrzuqbAI">here</A>.
 </BODY></HTML>
+```
+
+####wget
+```
+wget https://maps.googleapis.com/maps/api/staticmap?center=0,0&zoom=1&size=100x100&key=AIzaSyAWn2azIPVDJLTDayu-NTf5elROBD_ax6A
 ```
 
 ####run multiple commands

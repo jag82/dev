@@ -72,3 +72,15 @@ echo "internet access @ $IP_EXTERNAL"
 echo "5. starting web app"
 node index.js
 
+
+#optional
+#sudo apt install git
+#git clone git@github.com/jag82:web-example.git
+#cd web-example
+#npm run start
+
+#optional
+#npm install -g forever
+#forever start index.js
+#forever list
+

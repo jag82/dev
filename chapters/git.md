@@ -2,6 +2,19 @@
 
 github.com
 
+###Git Commands
+```
+git diff
+
+git add.
+git commit -am "custom commit message"
+
+git reset --hard
+
+git stash
+git stash apply
+git stash pop
+```
 
 ###Aliases
 See `_dev/.gitconfig.sample`.
