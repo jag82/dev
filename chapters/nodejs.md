@@ -17,6 +17,10 @@ See `scripts/create-web-app.sh`.
 
 `npm publish` TODO how to publish to private repos?
 
+`npm link` and `npm unlink`
+many uses, one is to act as a `bin` install simulator
+https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e
+
 ###Scripts
 `npm run` lists all scripts defined in the `scripts` section of `package.json` (TODO explain the package json, include a sample in `/_dev`).
 
