@@ -92,12 +92,17 @@ echo "something to append" >> your-file.js
 echo "something to write" > your-file.js
 
 
-####single quotes = literal, double quotes= expanded
+####single quotes = literal, double quotes= expanded immediately
 https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
+NAME=chuckles
+echo "$NAME" #outputs chuckles
+echo '$NAME' #outputs $NAME
+echo 'I am '"$CHUCKLES"!' #outputs I am chuckles!
 
 ####piping TODO | ||
 
 ####grep TODO
+
 
 ####read a file TODO < <<
 
@@ -128,6 +133,24 @@ find /path/to/files -type f -exec sed -i 's/oldstring/new string/g' {} \;
 ####curl
 ```
 curl google.com
+
+
+#HTTP GET
+
+
+#HTTP POST
+#with params
+#https://superuser.com/a/149335
+curl --data "param1=value1&param2=value2" https://example.com/resource.cgi
+curl --data "param1=value1" --data "param2=value2" https://example.com/resource.cgi
+curl -d "param1=value1" -d "param2=value2" https://example.com/resource.cgi
+
+#basic auth
+curl --user name:password http://www.example.com
+
+#auth token
+curl -H "Authorization: OAuth <ACCESS_TOKEN>" http://www.example.com
+
 ```
 
 returns html as string:
