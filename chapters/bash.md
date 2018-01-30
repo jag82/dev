@@ -3,32 +3,72 @@
 Shell scripts will be our bread and butter.
 
 
-
-###Customized Command Line and PATH vars
+##Customized Command Line and PATH vars
 See `_dev/.bash_profile.sample`.
 
 Note the difference between `.bashrc` and `.bash_profile` [here](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html).
 
-###Editors
+##Shorcuts
+TODO: summarize/prune the following:
+
+https://stackoverflow.com/questions/9679776/how-do-i-clear-delete-the-current-line-in-terminal
+
+    Clean up the line: You can use Ctrl+U to clear up to the beginning.
+    Clean up the line: Ctrl+A Ctrl+K to wipe the current line in the terminal
+    Cancel the current command/line: Ctrl+C.
+    Recall the deleted command: Ctrl+Y (then Alt+Y)
+    Go at the beginning of the line: Ctrl+A
+    Go at the end of the line: Ctrl+E
+    Remove the forward words for example, if you are middle of the command: Ctrl+K
+    Remove characters on the left, until the beginning of the word: Ctrl+W
+    To clear your entire command prompt: Ctrl + L
+    Toggle between the start of line and current cursor position: Ctrl + XX
+
+
+    Ctrl+a Move cursor to start of line
+    Ctrl+e Move cursor to end of line
+    Ctrl+b Move back one character
+    Alt+b Move back one word
+    Ctrl+f Move forward one character
+    Alt+f Move forward one word
+    Ctrl+d Delete current character
+    Ctrl+w Cut the last word
+    Ctrl+k Cut everything after the cursor
+    Alt+d Cut word after the cursor
+    Alt+w Cut word before the cursor
+    Ctrl+y Paste the last deleted command
+    Ctrl+_ Undo
+    Ctrl+u Cut everything before the cursor
+    Ctrl+xx Toggle between first and current position
+    Ctrl+l Clear the terminal
+    Ctrl+c Cancel the command
+    Ctrl+r Search command in history - type the search term
+    Ctrl+j End the search at current history entry
+    Ctrl+g Cancel the search and restore original line
+    Ctrl+n Next command from the History
+    Ctrl+p previous command from the History
+
+
+##Editors
 
 It's important to be able to use an in-console editor such as `vim` (which can be learned by typing `vimtutor`) or `nano`.
 
-###Permissions
+##Permissions
 
 TODO: `chmod`
 
-###Basic Commands
+##Basic Commands
 
 `stdout`
 `stdin`
 
-####show files in your current directory
+###show files in your current directory
 ```
 ls
 ls -a #shows hidden files
 ```
 
-####navigate to another directory
+###navigate to another directory
 ```
 cd .. #up one directory
 cd tango #enter the /tango directory (if present)
@@ -37,21 +77,21 @@ cd ~ #return to your home directory (user-specific)
 #TIP: customize your command prompt to make it easier to understand
 ```
 
-####symbol for your home directory
+###symbol for your home directory
 ```
 ~
 ```
 
-####printf (echo without the newline)
+###printf (echo without the newline)
 
-####output text to stdout (standard out, which can be printed to screen or used by other programs)
+###output text to stdout (standard out, which can be printed to screen or used by other programs)
 ```
 echo "This will get printed or passed to another program."
 NAME="Jag"
 echo "$NAME is cool."
 ```
 
-####output text to stdout and take arguments from stdin
+###output text to stdout and take arguments from stdin
 ```
 #output a file's contents to the terminal
 cat README.md
@@ -63,58 +103,58 @@ echo 'abc' | cat
 cat ~/.ssh/id_rsa.pub 
 ```
 
-####create file
+###create file
 ```
 touch your-file.js
 ```
 
-####delete a file
+###delete a file
 ```
 rm your-file.js
 ```
 
-####delete a directory (be careful!)
+###delete a directory (be careful!)
 ```
 rm -rf your-directory
 ```
 
-####move a file/directory TODO
+###move a file/directory TODO
 ```
 mv source dest
 ```
 
-####copy a file/directory TODO
+###copy a file/directory TODO
 
-####append to file
+###append to file
 echo "something to append" >> your-file.js
 
-####overwrite/create file
+###overwrite/create file
 echo "something to write" > your-file.js
 
 
-####single quotes = literal, double quotes= expanded immediately
+###single quotes = literal, double quotes= expanded immediately
 https://askubuntu.com/questions/76808/how-do-i-use-variables-in-a-sed-command
 NAME=chuckles
 echo "$NAME" #outputs chuckles
 echo '$NAME' #outputs $NAME
 echo 'I am '"$CHUCKLES"!' #outputs I am chuckles!
 
-####piping TODO | ||
+###piping TODO | ||
 
-####grep TODO
+###grep TODO
 
 
-####read a file TODO < <<
+###read a file TODO < <<
 
-####time TODO (check how long a program runs)
+###time TODO (check how long a program runs)
 
-####read TODO (prompt for user input)
+###read TODO (prompt for user input)
 
-####sed TODO
+###sed TODO
 
-####cut TODO
+###cut TODO
 
-####find TODO
+###find TODO
 ```
 #find all files named *.orig in current directory
 find . -name *.orig
@@ -130,7 +170,7 @@ sudo find / -name 'raspi-config'
 find /path/to/files -type f -exec sed -i 's/oldstring/new string/g' {} \;
 ```
 
-####curl
+###curl
 ```
 curl google.com
 
@@ -164,12 +204,12 @@ The document has moved
 </BODY></HTML>
 ```
 
-####wget
+###wget
 ```
 wget https://maps.googleapis.com/maps/api/staticmap?center=0,0&zoom=1&size=100x100&key=AIzaSyAWn2azIPVDJLTDayu-NTf5elROBD_ax6A
 ```
 
-####run multiple commands
+###run multiple commands
 
 Run commands in sequence:
 ```
@@ -181,16 +221,16 @@ Run commands in parallel:
 program1 & simlutaneousProgram2 #TODO replace with real, runnable example!
 ```
 
-####ifconfig
+###ifconfig
 
-####reboot
+###reboot
 
-####sudo
+###sudo
 
-####expr (regexes)
+###expr (regexes)
 
 
-####functions (also ####args)
+###functions (also ###args)
 ```
 function testfn(){ 
 	echo this is a test function
@@ -201,7 +241,7 @@ function testfn(){
 	echo $? #exit code of last function
 }
 
-####if statements
+###if statements
 ```
 if [ $1 -gt 100 ]
 then
@@ -211,7 +251,7 @@ fi
 ```
 
 ```
-####imports
+###imports
 ```
 source ./utils.sh
 
